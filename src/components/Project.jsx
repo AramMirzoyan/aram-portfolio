@@ -51,28 +51,30 @@ const projects = [
 
 const ProjectsShowcase = () => {
     return (
-        <section className="min-h-screen px-6 md:px-20 py-20 text-white bg-[#351394]">
+        <section className="min-h-screen px-4 sm:px-6 md:px-10 lg:px-20 py-12 md:py-20 text-white bg-[#351394]">
             <motion.h1
-                className="text-4xl font-bold mb-12 text-center"
+                className="text-3xl sm:text-4xl font-bold mb-8 md:mb-12 text-center"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
             >
                 Projects
             </motion.h1>
-            <div className="space-y-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
                 {projects.map((project, idx) => (
                     <motion.div
                         key={idx}
-                        className="bg-white/10 p-6 rounded-xl shadow-lg border border-white/20"
+                        className="bg-white/10 p-4 sm:p-6 rounded-xl shadow-lg border border-white/20 h-full flex flex-col"
                         initial={{ opacity: 0, y: 40 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: idx * 0.3, duration: 0.6 }}
+                        transition={{ delay: Math.min(idx * 0.2, 0.8), duration: 0.6 }}
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
                     >
-                        <h2 className="text-2xl font-semibold text-yellow-300 mb-2">{project.title}</h2>
-                        <ul className="list-disc list-inside text-white/90 text-sm pl-2 space-y-1">
+                        <h2 className="text-xl sm:text-2xl font-semibold text-yellow-300 mb-2">{project.title}</h2>
+                        <ul className="list-disc list-outside ml-4 text-white/90 text-xs sm:text-sm space-y-1 flex-grow">
                             {project.description.map((item, i) => (
-                                <li key={i}>{item}</li>
+                                <li key={i} className="pl-1">{item}</li>
                             ))}
                         </ul>
                     </motion.div>

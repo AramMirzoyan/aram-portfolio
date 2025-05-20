@@ -62,39 +62,70 @@ const Work = () => {
         },
     ];
 
+    const container = {
+        hidden: { opacity: 0 },
+        show: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2,
+                delayChildren: 0.3
+            }
+        }
+    };
+
+    const item = {
+        hidden: { opacity: 0, y: 20 },
+        show: { opacity: 1, y: 0 }
+    };
+
     return (
-        <section className="min-h-screen px-6 md:px-20 py-20 text-white bg-[#351394]">
+        <section className="min-h-screen px-4 sm:px-6 md:px-10 lg:px-20 py-12 md:py-20 text-white bg-[#351394]">
             <motion.h1
-                className="text-4xl font-bold mb-12 text-center"
+                className="text-3xl sm:text-4xl font-bold mb-8 md:mb-12 text-center"
                 initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 4, y: 0 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9 }}
             >
                 Work Experience
             </motion.h1>
-            <div className="space-y-12">
+
+            <motion.div
+                className="space-y-6 md:space-y-8"
+                variants={container}
+                initial="hidden"
+                animate="show"
+            >
                 {experiences.map((exp, idx) => (
                     <motion.div
                         key={idx}
-                        className="bg-white/10 p-6 rounded-xl shadow-lg border border-white/20"
-                        initial={{ opacity: 0, y: 40 }}
-                        animate={{ opacity: 3, y: 0 }}
-                        transition={{ delay: idx * 0.5, duration: 0.6 }}
+                        className="bg-white/10 p-4 sm:p-6 rounded-xl shadow-lg border border-white/20"
+                        variants={item}
+                        whileHover={{ scale: 1.01, transition: { duration: 0.2 } }}
                     >
-                        <h2 className="text-2xl font-semibold text-yellow-300">{exp.title}</h2>
-                        <p className="text-md text-white mb-2">
-                            <a href={exp.company.url} target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-300">
-                                {exp.company.name}
-                            </a> | <span className="italic">{exp.date}</span>
-                        </p>
-                        <ul className="list-disc list-inside text-white/90 text-sm pl-2 space-y-1">
-                            {exp.responsibilities.map((item, i) => (
-                                <li key={i}>{item}</li>
-                            ))}
-                        </ul>
+                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                            <h2 className="text-xl sm:text-2xl font-semibold text-yellow-300">{exp.title}</h2>
+                            <p className="text-sm sm:text-md text-white/80 italic">{exp.date}</p>
+                        </div>
+
+                        <a
+                            href={exp.company.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block mb-3 text-blue-300 hover:text-blue-200 underline text-sm sm:text-base transition-colors"
+                        >
+                            {exp.company.name}
+                        </a>
+
+                        {exp.responsibilities.length > 0 && (
+                            <ul className="list-disc list-outside ml-4 text-white/90 text-xs sm:text-sm space-y-1">
+                                {exp.responsibilities.map((item, i) => (
+                                    <li key={i} className="pl-1">{item}</li>
+                                ))}
+                            </ul>
+                        )}
                     </motion.div>
                 ))}
-            </div>
+            </motion.div>
         </section>
     );
 };
