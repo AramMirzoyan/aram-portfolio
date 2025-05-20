@@ -9,11 +9,12 @@ import {
     FaTelegramPlane,
     FaWhatsapp
 } from 'react-icons/fa';
+import {FaUpwork} from "react-icons/fa6";
 
 const Footer = () => {
     return (
         <div className=" text-amber-900 drop-shadow-md">
-            <div className='flex py-4 flex justify-center items-center gap-4'>
+            <div className='flex py-4 justify-center items-center gap-4'>
 
 
                 <a
@@ -59,6 +60,17 @@ const Footer = () => {
                     aria-label="WhatsApp">
                     <FaWhatsapp size={35} />
                 </a>
+
+                <a
+                    href="https://www.upwork.com/freelancers/~0164181316d63cc70c?mp_source=share"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition transform hover:scale-125"
+                    aria-label="Upwork"
+                >
+                    <FaUpwork size={35} />
+                </a>
+
             </div>
             <div>
                 <p ><strong>Email:</strong> aram.a.mirzoyan@gmail.com</p>

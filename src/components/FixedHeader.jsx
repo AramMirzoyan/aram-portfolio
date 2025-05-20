@@ -91,7 +91,7 @@ const FixedHeader = () => {
                 ))}
             </div>
             <div style={{
-                marginLeft: '50px'
+                marginLeft: '10px'
             }}>
                 <Footer />
 
