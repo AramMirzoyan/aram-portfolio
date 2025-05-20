@@ -12,8 +12,8 @@ const FixedHeader = () => {
         { name: 'Home', route: '/' },
         { name: 'Workplace', route: '/work' },
         { name: 'Skills', route: '/skills' },
-        { name: 'About me', route: '/about' },
         { name: 'Projects', route: '/project' },
+        { name: 'About me', route: '/about' },
     ];
 
 
