@@ -1,28 +1,32 @@
-import React from 'react';
-import profileImage from '../assets/aram-photo.jpg'; // Make sure you have this image in assets
+import React, { useEffect, useState } from 'react';
 
 const Hero = () => {
+    const [animate, setAnimate] = useState(false);
+
+    useEffect(() => {
+        const timer = setTimeout(() => setAnimate(true), 200);
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
-        <section className="flex flex-col-reverse md:flex-row items-center justify-between px-8 py-12">
-            <div className="max-w-xl text-center md:text-left">
-                <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                    Aram <br /> Mirzoyan
-                </h1>
-                <p className="text-xl text-gray-600 mb-6">Java Software Engineer</p>
-                <a
-                    href="/CV_Aram_Mirzoyan.pdf"
-                    download
-                    className="border-2 border-black px-6 py-2 rounded hover:bg-black hover:text-white transition"
+        <section
+            id="home"
+            className="relative min-h-screen flex items-center justify-center bg-[#351394] text-white"
+        >
+
+
+            {/* Centered Name Block */}
+            <div className="text-center px-6">
+                <p className="text-sm text-white/80 mb-2">Hi there, I am</p>
+                <h1
+                    className={`text-5xl md:text-6xl font-bold transition-all duration-1000 ${
+                        animate ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
+                    }`}
                 >
-                    View CV
-                </a>
-            </div>
-            <div className="mb-8 md:mb-0">
-                <img
-                    src={profileImage}
-                    alt="Aram Mirzoyan"
-                    className="w-60 md:w-72 rounded-xl object-cover"
-                />
+                    Aram <br />
+                    <span className="text-red-400">Mirzoyan</span>
+                </h1>
+                <p className="mt-4 text-white text-lg font-medium">Java Software Engineer</p>
             </div>
         </section>
     );
