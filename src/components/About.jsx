@@ -41,6 +41,7 @@ const About = () => {
                             <p className="mb-2"><strong>Email:</strong> aram.a.mirzoyan@gmail.com</p>
                             <p className="mb-2"><strong>Role:</strong> Java Software Engineer</p>
                             <p className="mb-2"><strong>Current company:</strong> Cognaize</p>
+                            <p className="mb-2"><strong>Phone number:</strong> +37444766763</p>
                         </motion.div>
                     </div>
 
