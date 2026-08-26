@@ -14,6 +14,36 @@ const projects = [
         ]
     },
     {
+        title: 'PA – Financial Document Batch Processing Platform',
+        description: [
+            'Designed and developed a Python-based internal application from scratch to automate financial document operations for the finance team.',
+            'Built a Streamlit user interface and Flask REST API for submitting, managing, and monitoring large document-processing jobs.',
+            'Implemented configurable batch and wave processing with progress tracking, retry handling, failure reporting, and execution-time estimation.',
+            'Supported multiple export workflows, including Corporate, Bank, Segment, versioned, and exceptional-case exports',
+            'Developed batch validation workflows and tools for retrieving validation results, document metadata, export statuses, generated file names, and processing errors.',
+            'Integrated the application with Airflow jobs, relational databases, MongoDB, and AWS S3.',
+            'Added tools for securely finding and deleting exported client files from development, staging, and production S3 environments.',
+            'Generated downloadable Excel and CSV reports containing export results, validation details, financial data, missing documents, group IDs, and processing summaries.',
+            'Replaced multiple manual finance-team operations with a centralized, reliable, and user-friendly automation platform.'
+
+        ]
+    },
+    {
+        title: 'Financial Document Packaging and Delivery System',
+        description: [
+            'Developed a Java application that processes financial documents using document IDs provided as input.',
+            'Retrieved document metadata and source-file locations from MongoDB and mapped the unstructured data into strongly typed Java models.',
+            'Downloaded the corresponding PDF or HTML documents from AWS S3 using source paths stored in MongoDB.',
+            'Retrieved required delivery file names and additional processing information from a MySQL database.',
+            'Migrated the existing export structure to the client-required v1.2.0 format.',
+            'Converted document metadata into Apache Parquet files using predefined schemas.',
+            'Created ZIP delivery packages containing the generated Parquet metadata and the corresponding PDF or HTML source document.',
+            'Uploaded the completed packages to the client’s AWS S3 environments, including development, staging, and production.',
+            'Implemented validation, error handling, and logging to ensure reliable document transformation and delivery'
+
+        ]
+    },
+    {
         title: 'PEP/REP Data Scraping System',
         description: [
             'Built backend applications using Spring Boot and Spring Batch for scraping and processing data related to PEP (Politically Exposed Persons) and REP (Related Exposed Persons).',

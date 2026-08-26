@@ -28,7 +28,8 @@ const Skills = () => {
                 'Spring (Core, Boot, Data, Security, Batch)',
                 'Hibernate (JPA)',
                 'JSP',
-                'Keycloak'
+                'Keycloak',
+                'Python'
             ]
         },
         {
@@ -54,6 +55,12 @@ const Skills = () => {
         {
             category: 'Version Control & DevOps',
             items: ['Git', 'Docker']
+        },
+        {
+            category: 'Cloud',
+            items: [
+                'AWS (IAM, EC2, S3, VPC, EBS, ELB, Auto Scaling, RDS, Lambda, SNS, SQS, IAM Roles, CI/CD)'
+            ]
         },
         {
             category: 'Operating Systems',

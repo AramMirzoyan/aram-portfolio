@@ -69,7 +69,7 @@ const Footer = () => {
                     <FaTelegramPlane size={isMobile ? 28 : 35} />
                 </a>
                 <a
-                    href="https://wa.me/37444766763"
+                    href="https://wa.me/374 (44) 766763"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="transition transform hover:scale-125 px-1"

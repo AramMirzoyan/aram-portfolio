@@ -80,9 +80,10 @@ const About = () => {
                             <h2 className="text-xl font-semibold mb-2">Tech Stack</h2>
                             <div className="bg-white rounded-xl shadow-md p-4 text-sm text-gray-700 leading-6">
                                 <strong>
-                                    Java, Spring Boot, Spring Batch, Hibernate (JPA), JSP, Apache Parquet, GraphQL,
-                                    RabbitMQ, JUnit, Mockito, Maven, Gradle, Git, Docker, MySQL, PostgreSQL, MongoDB,
-                                    Snowflake, Linux
+                                    Java, Spring Boot, Spring Batch, Spring Security, Keycloak, Hibernate (JPA), JSP,
+                                    Apache Parquet, GraphQL, RabbitMQ, JUnit, Mockito, Maven, Gradle, Git, Docker,
+                                    AWS (IAM, EC2, S3, VPC, EBS, ELB, Auto Scaling, RDS, Lambda, SNS, SQS), MySQL,
+                                    PostgreSQL, MongoDB, Snowflake, Linux
                                 </strong>
                             </div>
                         </motion.div>
