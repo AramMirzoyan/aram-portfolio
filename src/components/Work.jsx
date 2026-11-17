@@ -8,12 +8,13 @@ const Work = () => {
             company: { name: 'Cognaize', url: 'https://www.cognaize.com' },
             date: 'Feb 2023 - Current',
             responsibilities: [
-                'Worked on both client-facing and internal projects involving financial document processing using Spring Boot and Java.',
-                'Designed and implemented Java models for parsing and transforming JSON data, converting them into structured formats suitable for Parquet files.',
-                'Defined Parquet schemas and implemented automatic file uploads to AWS S3.',
-                'Wrote and maintained backend services using MySQL, PostgreSQL, and MongoDB.',
-                'Developed internal tools for uploading financial documents, using Python scripts to extract and validate data from the database.',
-                'Worked in a Linux-based environment, and participated in system architecture discussions with a focus on design patterns and SOLID principles.',
+                'Developed client-facing and internal financial document processing applications using Java, Spring Boot, and Hibernate (JPA), covering document management, validation, batch processing, and export workflows.',
+                'Designed Java models to parse and transform JSON data into structured formats and Apache Parquet files, defining schemas and implementing automated uploads/downloads to AWS S3 across development, staging, and production.',
+                'Built and maintained backend services using MySQL, PostgreSQL, and MongoDB, including scheduled synchronization with the InnoLytiQ (IQ) platform and processing status tracking for IFRS, US GAAP, PA, Bank, Segment Data, and Capital Structure.',
+                'Developed Python-based internal tools (Flask, Streamlit) to automate finance operations, including configurable batch/wave processing with retry handling, validation, progress tracking, and Excel/CSV reporting.',
+                'Participated in the development of the Gulfim financial document management platform, contributing to secure REST APIs with Spring Security/Keycloak OAuth2/OIDC, RabbitMQ asynchronous processing, AWS Secrets Manager, Ehcache, Flyway, and Swagger/OpenAPI.',
+                'Designed AI-powered document processing and export automation using Spring AI, tool calling, OCR/RAG pipelines, and Java Virtual Threads to orchestrate multi-step workflows with progress tracking and log monitoring.',
+                'Worked in Linux-based environments and contributed to system architecture discussions, applying design patterns, SOLID principles, and clean architecture.'
             ],
         },
         {
