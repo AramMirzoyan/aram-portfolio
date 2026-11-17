@@ -20,14 +20,16 @@ const Skills = () => {
         return () => window.removeEventListener('resize', checkMobile);
     }, []);
 
+
     const skillsData = [
         {
             category: 'Programming Languages & Frameworks',
             items: [
                 'Java (Core, OOP, Collections, Streams, Multithreading)',
-                'Spring (Core, Boot, Data, Security, Batch)',
+                'Spring (Core, Boot, Data, Security, Batch, AI)',
                 'Hibernate (JPA)',
                 'JSP',
+                'GraphQL',
                 'Keycloak',
                 'Python'
             ]
@@ -38,7 +40,7 @@ const Skills = () => {
         },
         {
             category: 'Data Processing & Integration',
-            items: ['Apache Parquet', 'RabbitMQ', 'Spring Batch', 'GraphQL',]
+            items: ['Apache Parquet', 'RabbitMQ']
         },
         {
             category: 'Build & Dependency Management',
@@ -46,20 +48,47 @@ const Skills = () => {
         },
         {
             category: 'Databases',
-            items: ['SQL', 'MySQL', 'MongoDB', 'PostgreSQL', 'SnowFlake']
+            items: [
+                'SQL',
+                'MySQL',
+                'PostgreSQL',
+                'MongoDB',
+                'Snowflake'
+            ]
         },
         {
             category: 'Frontend',
-            items: ['HTML', 'CSS (Bootstrap)', 'Angular (basic knowledge)']
+            items: [
+                'HTML',
+                'CSS (Bootstrap)',
+                'Angular (basic knowledge)'
+            ]
         },
         {
             category: 'Version Control & DevOps',
-            items: ['Git', 'Docker']
+            items: ['Git', 'Docker', 'CI/CD Pipelines']
         },
         {
             category: 'Cloud',
             items: [
-                'AWS (IAM, EC2, S3, VPC, EBS, ELB, Auto Scaling, RDS, Lambda, SNS, SQS, IAM Roles, CI/CD)'
+                'AWS (IAM, EC2, S3, VPC, Subnets, EBS, ELB, ALB, Auto Scaling, RDS, Lambda, SNS, SQS)'
+            ]
+        },
+        {
+            category: 'Artificial Intelligence (AI)',
+            items: [
+                'Spring AI',
+                'LLMs',
+                'RAG',
+                'MCP',
+                'A2A',
+                'AI Agent Harnesses',
+                'Vector Databases',
+                'Embeddings',
+                'Semantic Search',
+                'Hallucination Mitigation',
+                'Top-K Retrieval',
+                'Top-K and Top-P Sampling'
             ]
         },
         {
@@ -67,6 +96,7 @@ const Skills = () => {
             items: ['Linux', 'Windows']
         }
     ];
+
 
     return (
         <section className="min-h-screen px-4 sm:px-6 md:px-20 py-16 md:py-20 text-white bg-[#351394]">

@@ -28,6 +28,60 @@ const projects = [
 
         ]
     },
+
+    {
+        title: 'Gulfim – Financial Document Management & Processing Platform',
+        description: [
+            'Participated in the design and development of a financial document management and processing platform from scratch using Java 17, Spring Boot, and Hibernate (JPA).',
+            'Developed backend services for managing companies, financial reports, document metadata, and processing workflows.',
+            'Integrated MySQL and MongoDB to manage structured financial data and synchronize document processing information with the IQ (InnoLytiQ) platform.',
+            'Implemented scheduled synchronization processes to retrieve document and template processing statuses from MongoDB and update corresponding financial report records in MySQL.',
+            'Developed processing status tracking for multiple financial data types, including IFRS, US GAAP, PA, Bank, Segment Data, and Capital Structure.',
+            'Implemented document upload workflows with AWS S3 integration, duplicate detection, and asynchronous processing using RabbitMQ.',
+            'Developed validation mechanisms for financial document metadata, including company identifiers, reporting periods, document references, and processing requirements.',
+            'Implemented secure REST APIs using Spring Security and Keycloak with OAuth2/OIDC authentication and role-based access control.',
+            'Worked with client-specific validation strategies, Spring AOP, and configurable application components to support different business requirements.',
+            'Integrated AWS Secrets Manager for secure configuration management and Ehcache for application-level caching.',
+            'Implemented Excel export functionality for financial report statuses and company data.',
+            'Contributed to database migrations using Flyway, API documentation with Swagger/OpenAPI, and application reliability through retry mechanisms and error handling.'
+        ]
+    },
+
+    {
+        title: 'AI-Powered Document Processing & RAG Platform',
+        description: [
+            'Designed and developed an AI-powered document processing and Retrieval-Augmented Generation (RAG) application from scratch using Java, Spring Boot, and Spring AI.',
+            'Implemented automatic PDF classification to identify scanned, digital, and hybrid documents and select the appropriate extraction strategy.',
+            'Developed OCR processing for scanned PDFs using DeepSeek-OCR through Ollama, converting document pages into images and extracting structured Markdown content.',
+            'Implemented digital PDF text extraction using Apache PDFBox and table extraction using Tabula, preserving financial tables in Markdown format.',
+            'Built a document ingestion pipeline with configurable text chunking, embedding generation, and vector database storage using Spring AI.',
+            'Implemented hybrid search combining vector similarity and PostgreSQL full-text search with Reciprocal Rank Fusion (RRF) for improved document retrieval.',
+            'Integrated knowledge graph indexing to support context-aware retrieval and question answering over financial and other documents.',
+            'Optimized document processing using Java Virtual Threads, semaphores, and configurable concurrency limits for OCR and vector database operations.',
+            'Developed a multi-agent workflow for fact extraction, verification, and answer generation using OpenAI and locally hosted Ollama models.',
+            'Integrated Agent-to-Agent (A2A) protocol support to expose financial document question-answering capabilities to external AI agents.',
+            'Implemented REST APIs for PDF ingestion, document-based question answering, multi-agent processing, and retrieval debugging.',
+            'Applied source-grounded prompting and fact verification techniques to reduce LLM hallucinations and improve answer reliability.'
+        ]
+    },
+
+    {
+        title: 'AI-Powered Document Export Automation Agent',
+        description: [
+            'Designed and developed an AI-powered document export automation application using Java, Spring Boot, and Spring AI.',
+            'Implemented an AI agent with Spring AI tool calling to automate document export workflows based on document IDs and export types.',
+            'Developed custom AI tools using @Tool and @ToolParam annotations for recipe identification, export task creation, and export job execution.',
+            'Integrated REST APIs to create document-processing tasks and retrieve task identifiers for automated export execution.',
+            'Implemented support for multiple financial document export types, including Corporate, Bank, Segment Data, Rated, and As-Mapped.',
+            'Integrated Java and Python components to execute existing document export processes and manage runtime configuration.',
+            'Developed asynchronous batch export processing using Java Virtual Threads, supporting multiple document IDs with job progress tracking.',
+            'Implemented REST endpoints for submitting export requests and monitoring job status, completion percentage, and individual document results.',
+            'Implemented process execution monitoring, real-time log capturing, error handling, and sensitive credential redaction.',
+            'Designed configurable export environments using Spring Boot Configuration Properties for database connections, AWS S3 settings, and export parameters.',
+            'Automated multi-step document export operations through AI-driven tool orchestration and backend workflow execution.'
+        ]
+    },
+
     {
         title: 'Financial Document Packaging and Delivery System',
         description: [
